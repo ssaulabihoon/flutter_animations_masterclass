@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations_masterclass/screens/apple_watch_screen.dart';
 import 'package:flutter_animations_masterclass/screens/explicit_anmations_screen.dart';
 import 'package:flutter_animations_masterclass/screens/implicit_animations_screen.dart';
+import 'package:flutter_animations_masterclass/screens/swiping_card_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
@@ -40,6 +42,24 @@ class MenuScreen extends StatelessWidget {
               );
             },
             child: const Text('Explicit Animations'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              _goToPage(
+                context,
+                const AppleWatchScreen(),
+              );
+            },
+            child: const Text('Apple Watch'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              _goToPage(
+                context,
+                const SwipingCardsScreen(),
+              );
+            },
+            child: const Text('Swiping Cards'),
           ),
         ],
       )),
